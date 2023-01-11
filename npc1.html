@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>物品收集区</title>
+		<style>
+            /*主页面建筑位置*/
+			#int{
+				align-items: center;
+				justify-content: center;
+				z-index: 1;
+				background-repeat: no-repeat;
+				background-position:50% 0%;
+				display: flex;
+			}
+			.int1{
+				width:40%;
+				height:100%;
+			}
+			/*顶层建筑*/
+			.house1{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:30.2%;
+				top: 2%;
+			}
+			.int2{
+				width: 56%;
+				height: 48%;
+				
+			}
+		    /*二*/
+			.house2{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:29%;
+				top:106%;
+			}
+			.int3{
+				width: 58%;
+				height: 48%;
+			}
+			/*三*/
+			.house3{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:30.2%;
+				top:170%;
+			}
+			.int4{
+				width: 58%;
+				height: 48%;
+			}
+			/*四*/
+            .house4{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:29%;
+				top:290%;
+			}
+			.int5{
+				width: 58%;
+				height: 48%;
+			}
+			/*npc介绍*/
+			#NPC{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:29.5%;
+				top:400%;
+			}
+			.pc{
+				width: 90%;
+				height: 20%;
+			}
+			
+			/*右上角标签*/
+			.main1{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:1%;
+				width:7.5%;
+				height: 15%;
+			}
+			.main2{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:10%;
+				width:7.5%;
+				height: 15%;
+
+			}
+			
+			.main3{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:19%;
+				width:7.5%;
+				height: 15%;
+
+			}
+
+			/*npc解说*/
+			#test{
+				z-index: 3;
+				position: absolute;
+				left:43%;
+				top:412%;
+				font-size:25px;
+				color: saddlebrown;
+				font-family:华文行楷;
+			}
+			/*弹窗设置*/
+			#bao{
+				z-index: 3;
+				display: none;
+				position:absolute;
+				top:-30%;
+				left:15%;
+				width:200%;
+				height: 50%;
+			}
+			 /*图片的放大缩小*/
+			img:hover {
+			    animation: move .5s linear forwards;
+			}
+			 
+			 @keyframes move {
+			    0% {
+			        transform: scale(1);
+			    }
+				50%{
+					transform: scale(1.1);
+				}
+			 
+			    100% {
+			        transform: scale(1);
+			    }
+			}
+			/*移动端设置*/
+			 @media screen and (max-width: 640px){
+				/*主页面建筑位置*/
+				#int{
+					align-items: center;
+					justify-content: center;
+					z-index: 1;
+					background-repeat: no-repeat;
+					background-position:50% 0%;
+					display: flex;
+				}
+				.int1{
+					width:100%;
+					height:100%;
+				}
+				/*顶层建筑*/
+				.house1{
+					z-index: 2;
+					position: absolute;
+					left:1.8%;
+					top: 1.5%;
+				}
+				.int2{
+					width:100%;
+					height:125%;
+					
+				}
+				/*二*/
+				.house2{
+					z-index: 2;
+					position: absolute;
+					left:0%;
+					top: 60%;
+				}
+				.int3{
+					width:100%;
+					height:125%;
+				}
+				/*三*/
+				.house3{
+					z-index: 2;
+					position: absolute;
+					left:1.8%;
+					top:90%;
+				}
+				.int4{
+					width:100%;
+					height:125%;
+				}
+				/*四*/
+				.house4{
+					z-index: 2;
+					position: absolute;
+					left:0%;
+					top:153%;
+				}
+				.int5{
+					width:100%;
+					height:125%;
+				}
+				/*npc介绍*/
+				#NPC{
+					z-index: 2;
+					overflow: hidden;
+					position: absolute;
+					left:1%;
+					top:213%;
+				}
+				.pc{
+					width: 105%;
+					height: 20%;
+				}
+				/*右上角标签*/
+				.main1{
+					z-index: 2;
+					position: absolute;
+					left:83%;
+					top:0%;
+					width:20%;
+					height: 12%;
+
+				}
+				.main2{
+					z-index: 2;
+					position: absolute;
+					left:83%;
+					top:6%;
+					width:20%;
+					height: 12%;
+
+				}
+				
+				.main3{
+					z-index: 2;
+					position: absolute;
+					left:83%;
+					top:12%;
+					width:20%;
+					height: 12%;
+
+				}
+				/*npc解说*/
+				#test{
+					z-index: 3;
+					position: absolute;
+					left:30%;
+					top:219%;
+					font-size:16px;
+					color: saddlebrown;
+					font-family:华文行楷;
+				}
+				/*弹窗设置*/
+				#bao{
+					z-index: 3;
+					display: none;
+					position:absolute;
+					top:0%;
+					left:-80%;
+					width:200%;
+					height: 50%;
+				}
+				 /*图片的放大缩小*/
+				img:hover {
+				    animation: move .5s linear forwards;
+				}
+				 
+				 @keyframes move {
+				    0% {
+				        transform: scale(1);
+				    }
+				 
+				    50% {
+				        transform: scale(1.1);
+				    }
+					100%{
+						transform: scale(1);
+					}
+				}
+			 }
+				 
+		</style>
+		<script type="text/javascript">
+			window.location ="#NPC";//自动跳转到锚点处
+			var text = "在这里，我们可以了解到丰富多彩<br/>的点茶文化，了解不同点茶器具的<br/>历史，以及它们的使用方法。";
+			    var num = text.length;
+			
+			    var i =0;
+			    function writing() {
+			        var shower = text.substr(0,i);
+			        document.getElementById("test").innerHTML = shower;
+			        i++;
+			        if(i + 1 >= num){
+			            clearInterval("done");
+			        }
+			    }
+			var done=setInterval("writing()",100);
+			function showBao(){
+				document.getElementById("bao").style.display="block";
+			}
+			function closeBao(){
+				document.getElementById("bao").style.display="none";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="test"></div>
+		<div id="int">
+			<img class="int1" src="img/h6.jpg" width="100%" height="100%">
+			<div class="house1">
+				<img  class="int2" src="img/h4.png"/>
+			</div>
+			<div class="house2">
+				<img  class="int3" src="img/h3.png"/>
+			</div>
+			<div class="house3">
+				<img  class="int4" src="img/h2.png"/>
+			</div>
+			<div class="house4">
+				<img class="int5" src="img/h1.png"/>
+			</div>
+			<input type="image" src="img/M7.png" class="main1"/>
+			<div class="chajian">
+				<input type="image" src="img/M8.png" class="main2" />
+			</div>
+			<div class="chajian" onmousedown="showBao()" onmouseup="closeBao()">
+				<input type="image" src="img/M0.png" class="main3"/>
+				<div id="bao" style="display: none;">
+					<img class="pic" src="img/g1.png"/>
+				</div>
+			</div>
+			<div id="NPC">
+				<a href="https://lwenxue.github.io/web-team/npc2.html"><img class="pc" src="img/n1.png"/></a>
+			</div>
+		</div>
+		
+	</body>
+</html>
